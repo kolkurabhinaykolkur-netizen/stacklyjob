@@ -2353,3 +2353,16 @@ padding:40px 8%;
 flex-direction:column;
 }
 }
+
+
+.search-box input,
+.search-box select{
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+outline:none;
+}
+
+.error{
+border:2px solid red !important;
+}

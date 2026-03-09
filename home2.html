@@ -143,18 +143,17 @@ Getting a new job is never easy. Check what new jobs we have in store for you on
 
 </div>
 
-
 <div class="search-box">
 
-<input type="text" placeholder="Skills, Designations, Keyword">
+<input type="text" id="jobKeyword" placeholder="Skills, Designations, Keyword">
 
-<select>
-<option>Job Category</option>
-<option>Developer</option>
-<option>Designer</option>
+<select id="jobCategory">
+<option value="">Job Category</option>
+<option value="Developer">Developer</option>
+<option value="Designer">Designer</option>
 </select>
 
-<button>Find Job</button>
+<button id="findJobBtn">Find Job</button>
 
 </div>
 
@@ -169,6 +168,42 @@ Getting a new job is never easy. Check what new jobs we have in store for you on
 </div>
 
 </section>
+
+<script>
+
+
+  
+
+document.getElementById("findJobBtn").addEventListener("click", function(){
+
+let keyword = document.getElementById("jobKeyword");
+let category = document.getElementById("jobCategory");
+
+let valid = true;
+
+/* reset */
+keyword.classList.remove("error");
+category.classList.remove("error");
+
+/* check keyword */
+if(keyword.value.trim() === ""){
+keyword.classList.add("error");
+valid = false;
+}
+
+/* check category */
+if(category.value === ""){
+category.classList.add("error");
+valid = false;
+}
+
+/* if valid redirect */
+if(valid){
+window.location.href = "404page.html";
+}
+
+});
+</script>
 
 
 
