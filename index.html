@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Job Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+
+<header class="navbar">
+
+<div class="nav-container">
+<div class="logo">
+  <a href="index.html">
+    <img src="images/logo10 (2) (3).webp" alt="Stackly Logo">
+  </a>
+</div>
+
+<nav class="nav-menu" id="navMenu">
+
+<div class="close-menu" id="closeMenu">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<ul>
+
+<li class="dropdown">
+<a href="index.html">Home <i class="fa fa-angle-down"></i></a>
+
+<ul class="dropdown-menu">
+<li><a href="home2.html">Home 2</a></li>
+</ul>
+</li>
+
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+
+</ul>
+
+</nav>
+
+<div class="nav-right">
+
+<a href="login.html" class="login-btn">Login</a>
+
+<div class="hamburger" id="hamburger">
+<i class="fa fa-bars"></i>
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+<img src="images/jook1.webp" class="hero-img">
+</div>
+
+<div class="hero-right">
+
+<h1 class="hidden">
+Find Your Dream Job <br>
+With Stackly
+</h1>
+
+<p class="hidden">
+Stackly connects talented professionals with top companies.
+Search jobs and build your career with leading employers.
+</p>
+
+<div class="search-box">
+
+<input type="text" id="keyword" placeholder="Job Title or Keywords">
+
+<input type="text" id="city" placeholder="City">
+
+<select id="category">
+<option value="">Category</option>
+<option>Web Development</option>
+<option>Graphic Design</option>
+<option>Data Science</option>
+</select>
+
+<button onclick="searchJob()">
+<i class="fa fa-search"></i> Search Job
+</button>
+
+</div>
+
+<div class="hero-card">
+<img src="images/jooo.webp">
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-dream-job">
+
+<div class="stackly-container">
+
+<!-- LEFT CONTENT -->
+
+<div class="stackly-left hidden">
+
+<h2>
+Choose Your Dream Job <br>
+From Over 50,000+ Jobs
+</h2>
+
+<p>
+Stackly helps professionals discover the perfect career opportunities.
+Our platform connects skilled candidates with top companies across
+multiple industries worldwide.
+</p>
+
+<div class="stackly-features">
+
+<div class="feature-box">
+<i class="fa-solid fa-check"></i>
+<span>Seamless job searching</span>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-check"></i>
+<span>Secure employer connections</span>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-check"></i>
+<span>Top companies hiring daily</span>
+</div>
+
+</div>
+
+<a href="404.html" class="stackly-btn">Search Job Now</a>
+
+</div>
+
+<!-- RIGHT IMAGE -->
+
+<div class="stackly-right hidden">
+
+<img src="images/mmm.webp" class="stackly-main-image">
+
+<!-- ROTATING TEXT -->
+
+<div class="rotate-circle">
+
+<div class="circle-text">
+STACKLY JOB PLATFORM • FIND YOUR DREAM CAREER •
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="stackly-categories">
+
+<div class="categories-header">
+
+<h2>Popular Job Categories</h2>
+
+<p>Find the best opportunities across multiple industries</p>
+
+</div>
+
+<div class="categories-slider">
+
+<div class="categories-track">
+
+<div class="category-card">
+<i class="fa-solid fa-pen-ruler"></i>
+<span>Design</span>
+<p>241+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-code"></i>
+<span>Development</span>
+<p>1k+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-bullhorn"></i>
+<span>Marketing</span>
+<p>124+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-pen"></i>
+<span>Editing</span>
+<p>241+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-briefcase"></i>
+<span>Business</span>
+<p>1.2k+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-laptop"></i>
+<span>IT</span>
+<p>1.3k+ Jobs</p>
+</div>
+
+<!-- duplicate cards for smooth infinite scroll -->
+
+<div class="category-card">
+<i class="fa-solid fa-pen-ruler"></i>
+<span>Design</span>
+<p>241+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-code"></i>
+<span>Development</span>
+<p>1k+ Jobs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-bullhorn"></i>
+<span>Marketing</span>
+<p>124+ Jobs</p>
+</div>
+
+</div>
+
+</div>
+
+<a href="404.html" class="view-categories">
+View All Categories →
+</a>
+
+</section>
+
+<section class="stackly-featured-jobs">
+
+<h2 class="jobs-title">Featured Jobs</h2>
+
+<div class="jobs-filter">
+
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="design">Graphic Design</button>
+<button class="filter-btn" data-filter="video">Video Editing</button>
+<button class="filter-btn" data-filter="web">Web Development</button>
+<button class="filter-btn" data-filter="data">Data Science</button>
+<button class="filter-btn" data-filter="marketing">Marketing</button>
+
+</div>
+
+
+<div class="jobs-grid">
+
+<!-- DESIGN -->
+
+<div class="job-card design">
+
+<img src="images/ko (1).webp">
+
+<div class="job-content">
+
+<span class="job-type">Full Time</span>
+
+<h3>Creative Graphic Designer for Branding Agency</h3>
+
+<p>Barcelona, Spain • $50/hour</p>
+
+<a href="404.html" class="apply-btn">Apply Now</a>
+
+</div>
+
+</div>
+
+
+<!-- WEB -->
+
+<div class="job-card web">
+
+<img src="images/ko (2).webp">
+
+<div class="job-content">
+
+<span class="job-type">Full Time</span>
+
+<h3>Full Stack Developer with React Experience</h3>
+
+<p>Toronto, Canada • $45/hour</p>
+
+<a href="404.html" class="apply-btn">Apply Now</a>
+
+</div>
+
+</div>
+
+
+<!-- VIDEO -->
+
+<div class="job-card video">
+
+<img src="images/ko (3).webp">
+
+<div class="job-content">
+
+<span class="job-type">Full Time</span>
+
+<h3>Video Editor for Creative Production Studio</h3>
+
+<p>London, UK • $40/hour</p>
+
+<a href="404.html" class="apply-btn">Apply Now</a>
+
+</div>
+
+</div>
+
+
+<!-- MARKETING -->
+
+<div class="job-card marketing">
+
+<img src="images/ko (4).webp">
+
+<div class="job-content">
+
+<span class="job-type">Part Time</span>
+
+<h3>Senior Marketing Manager Position</h3>
+
+<p>Florida, USA • $55/hour</p>
+
+<a href="404.html" class="apply-btn">Apply Now</a>
+
+</div>
+
+</div>
+
+
+<!-- DATA -->
+
+<div class="job-card data">
+
+<img src="images/ko (5).webp">
+
+<div class="job-content">
+
+<span class="job-type">Full Time</span>
+
+<h3>Machine Learning Engineer</h3>
+
+<p>Berlin, Germany • $65/hour</p>
+
+<a href="404.html" class="apply-btn">Apply Now</a>
+
+</div>
+
+</div>
+
+
+<!-- DESIGN -->
+
+<div class="job-card design">
+
+<img src="images/ko (6).webp">
+
+<div class="job-content">
+
+<span class="job-type">Full Time</span>
+
+<h3>UI/UX Designer for Mobile Applications</h3>
+
+<p>New York, USA • $48/hour</p>
+
+<a href="404.html" class="apply-btn">Apply Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-how">
+
+<div class="stackly-how-container">
+
+<h2 class="how-title">
+How Stackly Works For Job Seekers
+</h2>
+
+<div class="how-grid">
+
+<!-- STEP 1 -->
+
+<div class="how-card hidden">
+
+<div class="how-icon">
+<i class="fa-solid fa-user-plus"></i>
+</div>
+
+<h3>1. Create Your Account</h3>
+
+<p>
+Sign up on Stackly and create your professional profile
+to start exploring thousands of job opportunities.
+</p>
+
+</div>
+
+<!-- STEP 2 -->
+
+<div class="how-card hidden">
+
+<div class="how-icon">
+<i class="fa-solid fa-file-arrow-up"></i>
+</div>
+
+<h3>2. Upload Your Resume</h3>
+
+<p>
+Upload your CV so employers can easily discover
+your skills and experience.
+</p>
+
+</div>
+
+<!-- STEP 3 -->
+
+<div class="how-card hidden">
+
+<div class="how-icon">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+
+<h3>3. Apply For Jobs</h3>
+
+<p>
+Browse thousands of job listings and apply
+to the positions that match your career goals.
+</p>
+
+</div>
+
+<!-- STEP 4 -->
+
+<div class="how-card hidden">
+
+<div class="how-icon">
+<i class="fa-solid fa-check-circle"></i>
+</div>
+
+<h3>4. Get Hired</h3>
+
+<p>
+Connect with employers and land your dream job
+with the help of Stackly.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="stackly-hiring">
+
+<div class="stackly-hiring-container">
+
+<!-- LEFT IMAGE -->
+
+<div class="stackly-hiring-image hidden">
+
+<img src="images/lll.webp" alt="Stackly Hiring">
+
+
+
+</div>
+
+<!-- RIGHT CONTENT -->
+
+<div class="stackly-hiring-content hidden">
+
+<h2>
+Find The Best Talent <br>
+With Stackly Hiring Platform
+</h2>
+
+<p>
+Stackly provides modern hiring tools that help companies
+connect with top professionals worldwide. Discover the
+perfect candidates quickly and grow your team efficiently.
+</p>
+
+<div class="stackly-stats">
+
+<div>
+<h3>20K+</h3>
+<span>JOB POSTS</span>
+</div>
+
+<div>
+<h3>50K+</h3>
+<span>CANDIDATES</span>
+</div>
+
+<div>
+<h3>3.5K+</h3>
+<span>REVIEWS</span>
+</div>
+
+</div>
+
+<a href="404.html" class="stackly-hiring-btn">
+Browse Candidates
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-candidates">
+
+<h2 class="candidates-title">Top Candidates To Hire</h2>
+
+<div class="candidates-grid">
+
+<!-- CARD 1 -->
+
+<div class="candidate-card">
+
+
+<img src="images/ti (1).webp">
+
+
+<h3>Angela Carter</h3>
+<p class="role">UI/UX Designer</p>
+
+<div class="rating">
+5.0 ⭐⭐⭐⭐⭐
+</div>
+
+<div class="info">
+<span>Spain</span>
+<span>$56/hour</span>
+</div>
+
+<a href="404.html" class="profile-btn">View Profile</a>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="candidate-card">
+
+
+<img src="images/ti (2).webp">
+
+
+<h3>Jane Ronan</h3>
+<p class="role">Business Analytics</p>
+
+<div class="rating">
+5.0 ⭐⭐⭐⭐⭐
+</div>
+
+<div class="info">
+<span>Canada</span>
+<span>$45/hour</span>
+</div>
+
+<a href="404.html" class="profile-btn">View Profile</a>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="candidate-card">
+
+
+<img src="images/ti (3).webp">
+
+
+<h3>David Roy</h3>
+<p class="role">Java Developer</p>
+
+<div class="rating">
+4.9 ⭐⭐⭐⭐⭐
+</div>
+
+<div class="info">
+<span>Florida</span>
+<span>$65/hour</span>
+</div>
+
+<a href="404.html" class="profile-btn">View Profile</a>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="candidate-card">
+
+
+<img src="images/ti (4).webp">
+
+
+<h3>Skyler White</h3>
+<p class="role">Mobile App Developer</p>
+
+<div class="rating">
+4.8 ⭐⭐⭐⭐⭐
+</div>
+
+<div class="info">
+<span>Spain</span>
+<span>$55/hour</span>
+</div>
+
+<a href="404.html" class="profile-btn">View Profile</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="stackly-testimonials">
+
+<div class="stackly-overlay"></div>
+
+<div class="stackly-testimonials-container">
+
+<h2>Have A Look Our Success Stories</h2>
+<p class="subtitle">Stackly has helped thousands build successful careers</p>
+
+<div class="testimonial-wrapper">
+
+<button class="arrow left">←</button>
+
+<div class="testimonial-card">
+
+<div class="trust-header">
+
+<span class="trust">★ Stackly Reviews</span>
+
+<span class="stars">5.0 ⭐⭐⭐⭐⭐</span>
+
+</div>
+
+<p class="testimonial-text">
+
+"Stackly helped me connect with amazing companies.
+The hiring process was smooth and I found my dream
+job within just a few weeks."
+
+</p>
+
+<h4>Rahul Mehta</h4>
+<span class="role">Senior UI Designer at TechWave</span>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="trust-header">
+
+<span class="trust">★ Stackly Reviews</span>
+
+<span class="stars">5.0 ⭐⭐⭐⭐⭐</span>
+
+</div>
+
+<p class="testimonial-text">
+
+"Using Stackly made hiring extremely easy.
+We discovered top candidates and built
+our team faster than ever."
+
+</p>
+
+<h4>Sophia Carter</h4>
+<span class="role">HR Manager at Nexa Corp</span>
+
+</div>
+
+<button class="arrow right">→</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-insights">
+
+<div class="insights-header">
+
+<div>
+<h2>Stackly Insights</h2>
+<p>Read and gain knowledge from our experts.</p>
+</div>
+
+<a href="404.html" class="browse-link">
+Browse All Articles →
+</a>
+
+</div>
+
+<div class="insights-grid">
+
+<!-- BLOG CARD 1 -->
+
+<div class="insight-card">
+
+<img src="images/b (1).webp" alt="blog">
+
+<div class="insight-content">
+
+<span class="date">📅 22 Jul, 2025</span>
+
+<h3>
+How Designers Improve UI Layout With Modern Tools
+</h3>
+
+<a href="404.html" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</div>
+
+<!-- BLOG CARD 2 -->
+
+<div class="insight-card">
+
+<img src="images/b (2).webp" alt="blog">
+
+<div class="insight-content">
+
+<span class="date">📅 21 Jul, 2025</span>
+
+<h3>
+5 Productivity Tips For Remote Work Teams
+</h3>
+
+<a href="404.html" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</div>
+
+<!-- BLOG CARD 3 -->
+
+<div class="insight-card">
+
+<img src="images/b (3).webp" alt="blog">
+
+<div class="insight-content">
+
+<span class="date">📅 20 Jul, 2025</span>
+
+<h3>
+UX Designer Checklist For Building Better Products
+</h3>
+
+<a href="404.html" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</div>
+
+<!-- BLOG CARD 4 -->
+
+<div class="insight-card">
+
+<img src="images/b (4).webp" alt="blog">
+
+<div class="insight-content">
+
+<span class="date">📅 15 Jul, 2025</span>
+
+<h3>
+Full Stack Developer Skills Required In 2026
+</h3>
+
+<a href="404.html" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-app">
+
+<div class="stackly-app-container">
+
+<!-- LEFT TEXT -->
+
+<div class="app-left">
+
+<h2>
+Download Our <br>
+<b>Stackly Mobile App</b> <br>
+For Better Experience
+</h2>
+
+</div>
+
+<!-- CENTER PHONES -->
+
+<div class="app-center">
+
+<img src="images/hh.webp" alt="app">
+<img src="images/jj.webp" alt="app">
+
+</div>
+
+<!-- RIGHT CONTENT -->
+
+<div class="app-right">
+
+<p>
+Take your job search on the go!  
+Download the Stackly app today and find your dream job anytime, anywhere.
+Available on iOS and Android.
+</p>
+
+<div class="app-buttons">
+
+<a href="404.html" class="apple-btn">Download on the Apple Store
+</a>
+
+<a href="404.html" class="play-btn">
+ Download on Google Play
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-start">
+
+<div class="stackly-start-grid">
+
+<!-- CANDIDATE CARD -->
+
+<div class="start-card candidate">
+
+<div class="start-content">
+
+<h2>Start As A Candidate</h2>
+
+<p>
+Build your Stackly profile and connect with top companies.
+Discover job opportunities that match your skills and career goals.
+</p>
+
+<a href="404.html" class="start-btn candidate-btn">
+Join Now
+</a>
+
+</div>
+
+<div class="start-image">
+<img src="images/kk (2).webp" alt="candidate">
+</div>
+
+</div>
+
+<!-- CLIENT CARD -->
+
+<div class="start-card client">
+
+<div class="start-content">
+
+<h2>Start As A Client</h2>
+
+<p>
+Post jobs and find talented professionals quickly.
+Stackly helps you hire the best candidates for your business.
+</p>
+
+<a href="404.html" class="start-btn client-btn">
+Get Started
+</a>
+
+</div>
+
+<div class="start-image">
+<img src="images/kk (1).webp" alt="client">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<footer class="stackly-footer">
+
+<div class="footer-container">
+
+<!-- LOGO -->
+<div class="footer-logo">
+  <a href="index.html">
+    <img src="images/logo10 (2) (3).webp" alt="logo">
+  </a>
+</div>
+
+<!-- SERVICES -->
+
+<div class="footer-col">
+
+<h3>Services</h3>
+
+<a href="404.html">Browse Jobs</a> <a href="404.html">Companies</a> <a href="404.html">Candidates</a> <a href="404.html">Pricing</a>
+
+</div>
+
+<!-- COMPANY -->
+
+<div class="footer-col">
+
+<h3>Company</h3>
+
+<a href="404.html">About Us</a> <a href="blogs.html">Blog</a> <a href="404.html">FAQ's</a> <a href="contact.html">Contact</a>
+
+</div>
+
+<!-- SUPPORT -->
+
+<div class="footer-col">
+
+<h3>Support</h3>
+
+<a href="404.html">Terms Of Use</a> <a href="#">Terms & Conditions</a> <a href="404.html">Privacy Policy</a> <a href="404.html">Cookies Policy</a>
+
+</div>
+
+<!-- SUBSCRIBE -->
+
+<div class="footer-col subscribe">
+
+<h3>Subscribe</h3>
+
+<input type="email" id="emailInput" placeholder="Email">
+
+<button onclick="validateEmail()">
+Subscribe Now
+</button>
+
+<p class="note">
+We only send interesting and relevant emails.
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+<p>© Stackly Job Portal — All Rights Reserved</p>
+
+<div class="social">
+
+<a href="404.html" class="social-icon">
+
+<svg viewBox="0 0 24 24">
+<path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.6V12h2.6V9.7c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/>
+</svg>
+
+</a>
+
+<a href="404.html" class="social-icon">
+
+<svg viewBox="0 0 24 24">
+<path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm5 5.5A4.5 4.5 0 1112 17a4.5 4.5 0 010-9.5zm5.3-.9a1 1 0 11-2 0 1 1 0 012 0z"/>
+</svg>
+
+</a>
+
+<a href="404.html" class="social-icon">
+
+<svg viewBox="0 0 24 24">
+<path d="M22 5.9c-.8.4-1.6.6-2.4.8.9-.5 1.5-1.3 1.8-2.2-.8.5-1.8.9-2.7 1.1A4.2 4.2 0 0015.5 4c-2.3 0-4.1 2-3.6 4.3A11.9 11.9 0 013 5.1a4.2 4.2 0 001.3 5.6c-.7 0-1.3-.2-1.9-.5 0 2 1.4 3.7 3.4 4.1-.6.2-1.3.2-1.9.1.5 1.6 2.1 2.8 4 2.8A8.5 8.5 0 012 19.5 12 12 0 008.3 21c7.6 0 11.8-6.4 11.5-12.2.8-.6 1.5-1.3 2.1-2.1z"/>
+</svg>
+
+</a>
+
+<a href="404.html" class="social-icon">
+
+<svg viewBox="0 0 24 24">
+<path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3v6.3zM5.3 7.4A2.1 2.1 0 115.3 3a2.1 2.1 0 010 4.4zM7.1 20.4H3.5V9h3.6v11.4z"/>
+</svg>
+
+</a>
+
+</div>
+
+
+</div>
+
+</footer>
+
+<button id="scrollTopBtn">
+
+<svg viewBox="0 0 24 24">
+<path d="M12 5l-7 7h4v7h6v-7h4z"/>
+</svg>
+
+</button>
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
