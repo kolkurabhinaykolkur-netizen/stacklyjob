@@ -2366,3 +2366,8 @@ outline:none;
 .error{
 border:2px solid red !important;
 }
+
+
+.error{
+border:2px solid red;
+}

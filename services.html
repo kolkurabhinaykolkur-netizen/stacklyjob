@@ -28,7 +28,7 @@
 
 <div class="logo">
   <a href="index.html">
-    <img src="images/logo10 (2) (3).webp" alt="Stackly Logo">
+    <img src="images/loo.webp" alt="Stackly Logo">
   </a>
 </div>
 
@@ -211,7 +211,7 @@ HOME  >>  SERVICES
 
 <div class="job-info">
 
-<h4>Video Animation with VFX & 3D</h4>
+<h4>Video Animation with VFX & 3D  stackly editing.</h4>
 
 <p>Hampshire • $65/hour</p>
 
@@ -313,7 +313,7 @@ HOME  >>  SERVICES
 
 <img src="images/CC (4).webp">
 
-<h4>Success Stories: How Job Seekers Landed Their Dream Jobs</h4>
+<h4>Success Stories: How Job Seekers Landed.</h4>
 
 <p>15 Jul, 2025</p>
 
@@ -361,7 +361,7 @@ HOME  >>  SERVICES
 
 <img src="images/CC (4).webp">
 
-<h4>Full Stack Developer with Machine Learning</h4>
+<h4>Full Stack Developer with AI</h4>
 
 <p>21 Jul, 2025</p>
 
@@ -385,11 +385,7 @@ HOME  >>  SERVICES
 
 <!-- PAGINATION -->
 
-<div class="pagination">
 
-<span class="page active">1</span> <span class="page">2</span> <span class="page">3</span>
-
-</div>
 
 </div>
 
@@ -424,7 +420,7 @@ HOME  >>  SERVICES
 
 <h4>PERSONAL</h4>
 
-<h1>$15 <span>/ Monthly</span></h1>
+<h1 id="price1">$15 <span>/ Monthly</span></h1>
 
 <p>Perfect for job seekers exploring opportunities.</p>
 
@@ -449,7 +445,7 @@ Get Started Now
 
 <h4>STANDARD</h4>
 
-<h1>$25 <span>/ Monthly</span></h1>
+<h1 id="price2">$25 <span>/ Monthly</span></h1>
 
 <p>Perfect for job seekers exploring opportunities.</p>
 
@@ -474,7 +470,7 @@ Get Started Now
 
 <h4>PREMIUM</h4>
 
-<h1>$35 <span>/ Monthly</span></h1>
+<h1 id="price3">$35 <span>/ Monthly</span></h1>
 
 <p>Perfect for professionals seeking unlimited access.</p>
 
@@ -495,6 +491,41 @@ Get Started Now
 </div>
 
 </section>
+
+
+
+
+<script>
+
+
+  
+
+let toggle = document.getElementById("togglePlan");
+
+toggle.addEventListener("change", function(){
+
+let price1 = document.getElementById("price1");
+let price2 = document.getElementById("price2");
+let price3 = document.getElementById("price3");
+
+if(toggle.checked){
+
+price1.innerHTML = "$150 <span>/ Yearly</span>";
+price2.innerHTML = "$250 <span>/ Yearly</span>";
+price3.innerHTML = "$350 <span>/ Yearly</span>";
+
+}else{
+
+price1.innerHTML = "$15 <span>/ Monthly</span>";
+price2.innerHTML = "$25 <span>/ Monthly</span>";
+price3.innerHTML = "$35 <span>/ Monthly</span>";
+
+}
+
+});
+
+
+</script>
 
 
 
@@ -693,7 +724,7 @@ I accept the Terms & Conditions and Privacy Policy
 <!-- LOGO -->
 <div class="footer-logo">
   <a href="index.html">
-    <img src="images/logo10 (2) (3).webp" alt="logo">
+    <img src="images/loo.webp" alt="logo">
   </a>
 </div>
 <!-- SERVICES -->
@@ -712,7 +743,7 @@ I accept the Terms & Conditions and Privacy Policy
 
 <h3>Company</h3>
 
-<a href="404.html">About Us</a> <a href="blogs.html">Blog</a> <a href="404.html">FAQ's</a> <a href="contact.html">Contact</a>
+<a href="about.html">About Us</a> <a href="blogs.html">Blog</a> <a href="404.html">FAQ's</a> <a href="contact.html">Contact</a>
 
 </div>
 

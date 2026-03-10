@@ -113,8 +113,6 @@ Home <i class="fa fa-angle-down"></i>
 </div>
 
 
-
-
 <!-- HERO -->
 
 <section class="hero">
@@ -143,6 +141,8 @@ Getting a new job is never easy. Check what new jobs we have in store for you on
 
 </div>
 
+<!-- SEARCH BOX -->
+
 <div class="search-box">
 
 <input type="text" id="jobKeyword" placeholder="Skills, Designations, Keyword">
@@ -157,6 +157,9 @@ Getting a new job is never easy. Check what new jobs we have in store for you on
 
 </div>
 
+<!-- ERROR MESSAGE -->
+<p id="jobErrorMsg"></p>
+
 </div>
 
 
@@ -164,49 +167,61 @@ Getting a new job is never easy. Check what new jobs we have in store for you on
 <img src="images/home2.webp">
 </div>
 
-
 </div>
 
 </section>
 
+
+
 <script>
-
-
-  
 
 document.getElementById("findJobBtn").addEventListener("click", function(){
 
 let keyword = document.getElementById("jobKeyword");
 let category = document.getElementById("jobCategory");
+let errorMsg = document.getElementById("jobErrorMsg");
 
 let valid = true;
 
-/* reset */
+/* RESET */
+
 keyword.classList.remove("error");
 category.classList.remove("error");
+errorMsg.innerText = "";
 
-/* check keyword */
+/* CHECK KEYWORD */
+
 if(keyword.value.trim() === ""){
 keyword.classList.add("error");
 valid = false;
 }
 
-/* check category */
+/* CHECK CATEGORY */
+
 if(category.value === ""){
 category.classList.add("error");
 valid = false;
 }
 
-/* if valid redirect */
-if(valid){
-window.location.href = "404page.html";
+/* SHOW ERROR MESSAGE */
+
+if(!valid){
+
+errorMsg.style.color = "red";
+errorMsg.style.marginTop = "10px";
+errorMsg.innerText = "⚠ Please fill all the fields";
+
+return;
+
 }
 
+/* SUCCESS REDIRECT */
+
+window.location.href = "404page.html";
+
 });
+
 </script>
-
-
-
 <!-- FEATURED JOBS -->
 
 <section class="jobs">
@@ -1155,7 +1170,7 @@ income opportunities through the Stackly platform.
 
 <p>
 Stackly provides tools and guidance to help job seekers
-reach their professional goals faster.
+reach their professional goals faster.  stackly provides seamless functions.
 </p>
 
 <a href="404page.html" class="blog-btn">Continue Reading</a>

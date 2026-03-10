@@ -344,7 +344,6 @@ Already have account?
 </div>
 </div>
 
-
 <script>
 
 /* SWITCH LOGIN / REGISTER */
@@ -378,18 +377,36 @@ window.location.href="404.html";
 }
 
 
+/* EMAIL VALIDATION FUNCTION */
+
+function validateEmail(email){
+
+/* Only letters numbers + one @ and . allowed */
+
+let pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+
+return pattern.test(email);
+
+}
+
+
 /* LOGIN VALIDATION */
 
 function loginUser(){
 
-let email=document.querySelector(".login input[type=email]").value;
-let pass=document.getElementById("loginPass").value;
+let email=document.querySelector(".login input[type=email]").value.trim();
+let pass=document.getElementById("loginPass").value.trim();
 let error=document.getElementById("loginError");
 
 error.style.color="red";
 
 if(email==="" || pass===""){
 error.innerText="⚠ Please fill all login fields";
+return;
+}
+
+if(!validateEmail(email)){
+error.innerText="⚠ Invalid email format (special characters  allowed)";
 return;
 }
 
@@ -407,15 +424,20 @@ window.location.href="404.html";
 
 function registerUser(){
 
-let name=document.querySelector(".register input[type=text]").value;
-let email=document.querySelector(".register input[type=email]").value;
-let pass=document.getElementById("regPass").value;
+let name=document.querySelector(".register input[type=text]").value.trim();
+let email=document.querySelector(".register input[type=email]").value.trim();
+let pass=document.getElementById("regPass").value.trim();
 let error=document.getElementById("registerError");
 
 error.style.color="red";
 
 if(name==="" || email==="" || pass===""){
 error.innerText="⚠ Please fill all fields";
+return;
+}
+
+if(!validateEmail(email)){
+error.innerText="⚠ Invalid email format (special characters  allowed)";
 return;
 }
 

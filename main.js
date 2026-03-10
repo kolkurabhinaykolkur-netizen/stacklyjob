@@ -10,11 +10,16 @@ closeMenu.addEventListener("click",()=>{
 navMenu.classList.remove("active");
 });
 
+
+
+
+
 function searchJob(){
 
 let keyword = document.getElementById("keyword");
 let city = document.getElementById("city");
 let category = document.getElementById("category");
+let message = document.getElementById("searchMessage");
 
 keyword.classList.remove("error");
 city.classList.remove("error");
@@ -24,25 +29,33 @@ let valid = true;
 
 if(keyword.value === ""){
 keyword.classList.add("error");
-valid=false;
+valid = false;
 }
 
 if(city.value === ""){
 city.classList.add("error");
-valid=false;
+valid = false;
 }
 
 if(category.value === ""){
 category.classList.add("error");
-valid=false;
+valid = false;
 }
 
-if(valid){
+if(!valid){
+message.style.color = "red";
+message.innerText = "⚠ Please fill the fields";
+return;
+}
+
+message.style.color = "green";
+message.innerText = "Searching Jobs...";
+
+setTimeout(()=>{
 window.location.href="404.html";
-}
+},1000);
 
 }
-
 /* SCROLL ANIMATION */
 
 const observer=new IntersectionObserver(entries=>{
@@ -635,6 +648,9 @@ document.getElementById("registerFormBox").classList.remove("active")
 document.getElementById("loginFormBox").classList.add("active")
 
 }
+
+
+
 
 
 
