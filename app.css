@@ -47,45 +47,50 @@ font-weight:500;
 
 
 
-/* DROPDOWN */
-
+/* Parent */
 .dropdown{
 position:relative;
 }
 
+/* Dropdown hidden by default */
 .dropdown-menu{
 position:absolute;
-top:100%;
+top:35px;
 left:0;
-background:white;
-border-radius:6px;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
+background:#fff;
+min-width:170px;
+border-radius:8px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
 
-display:none;
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
 
-min-width:120px;
-list-style:none;
-padding:10px 0;
-
-flex-direction:column;
+transition:all 0.25s ease;
 }
 
+/* Dropdown links */
 .dropdown-menu li{
-padding:8px 20px;
+list-style:none;
 }
 
 .dropdown-menu li a{
-color:#111;
+display:block;
+padding:10px 18px;
 text-decoration:none;
-display:block;
+color:#222;
 }
 
+/* Hover effect */
 .dropdown-menu li a:hover{
-color:#0ea472;
+background:#f5f5f5;
 }
 
+/* Show only when hovering */
 .dropdown:hover .dropdown-menu{
-display:block;
+opacity:1;
+visibility:visible;
+transform:translateY(0);
 }
 /* LOGIN */
 
@@ -2371,3 +2376,5 @@ border:2px solid red !important;
 .error{
 border:2px solid red;
 }
+
+

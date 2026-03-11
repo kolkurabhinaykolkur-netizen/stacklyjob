@@ -400,8 +400,6 @@ icon.textContent = "+";
 
 });
 
-
-
 document.getElementById("contactForm").addEventListener("submit", function(e){
 
 e.preventDefault();
@@ -412,48 +410,74 @@ let subject = document.getElementById("subject");
 let message = document.getElementById("message");
 let terms = document.getElementById("terms");
 
-let inputs = [name,email,subject,message];
-
 let valid = true;
 
-inputs.forEach(input => {
+function setError(input, message){
 
-if(input.value.trim() === ""){
-
-input.style.border = "2px solid red";
-valid = false;
-
-}else{
-
-input.style.border = "1px solid #ddd";
+let error = input.nextElementSibling;
+error.innerText = message;
+input.classList.add("error-border");
 
 }
 
-});
+function clearError(input){
 
+let error = input.nextElementSibling;
+error.innerText = "";
+input.classList.remove("error-border");
+
+}
+
+
+if(name.value.trim() === ""){
+setError(name,"Name is required");
+valid = false;
+}else{
+clearError(name);
+}
+
+
+if(email.value.trim() === ""){
+setError(email,"Email is required");
+valid = false;
+}else{
+clearError(email);
+}
+
+
+if(subject.value.trim() === ""){
+setError(subject,"Subject is required");
+valid = false;
+}else{
+clearError(subject);
+}
+
+
+if(message.value.trim() === ""){
+setError(message,"Message is required");
+valid = false;
+}else{
+clearError(message);
+}
+
+
+let termsError = document.getElementById("termsError");
 
 if(!terms.checked){
-
-alert("Please accept Terms & Conditions");
+termsError.innerText = "Please accept Terms & Conditions";
 valid = false;
-
+}else{
+termsError.innerText = "";
 }
 
 
 if(valid){
 
-alert("Message sent successfully!");
-
-setTimeout(function(){
-
 window.location.href = "404.html";
-
-},1000);
 
 }
 
 });
-
 
 let searchInput = document.getElementById("searchInput");
 
